@@ -1,0 +1,956 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers — PulseBoard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="min-h-screen bg-[#F6F8FB] font-[Inter] text-[#111827]">
+
+    <div class="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
+
+         <!-- Sidebar -->
+<aside class="sticky top-0 hidden h-screen self-start overflow-y-auto border-r border-gray-200 bg-white lg:block">
+
+    <div class="flex h-full flex-col px-5 py-6">
+
+        <!-- Brand -->
+        <div class="mb-8 flex items-center gap-3">
+
+            <!-- PulseBoard Logo -->
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600">
+
+                <svg
+                    class="h-5 w-5 text-white"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline>
+                </svg>
+
+            </div>
+
+            <div>
+                <h1 class="text-lg font-semibold tracking-tight text-gray-900">
+                    PulseBoard
+                </h1>
+
+                <p class="text-[11px] text-gray-500">
+                    Business Intelligence
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav aria-label="Main navigation" class="flex-1">
+
+            <p class="mb-3 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                Workspace
+            </p>
+
+
+            <!-- Overview -->
+            <a
+                href="index.html"
+                class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-blue-600"
+            >
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                </svg>
+
+                <span>Overview</span>
+
+            </a>
+
+
+            <!-- Analytics -->
+            <a href="analytics.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-blue-600">
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <line x1="4" y1="19" x2="4" y2="10"></line>
+                    <line x1="10" y1="19" x2="10" y2="5"></line>
+                    <line x1="16" y1="19" x2="16" y2="12"></line>
+                    <line x1="22" y1="19" x2="22" y2="8"></line>
+                </svg>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <!-- Customers -->
+            <a href="customers.html" class="mb-1 flex items-center gap-3 rounded-lg border-l-2 border-blue-600 bg-blue-50 px-3 py-2.5 text-sm font-medium text-blue-700 transition-colors duration-200">
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+
+                <span>Customers</span>
+
+            </a>
+
+
+            <!-- Operations -->
+            <a href="operations.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-blue-600">
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M12 2v4"></path>
+                    <path d="M12 18v4"></path>
+                    <path d="M4.93 4.93l2.83 2.83"></path>
+                    <path d="M16.24 16.24l2.83 2.83"></path>
+                    <path d="M2 12h4"></path>
+                    <path d="M18 12h4"></path>
+                    <path d="M4.93 19.07l2.83-2.83"></path>
+                    <path d="M16.24 7.76l2.83-2.83"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+
+                <span>Operations</span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a href="reports.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-blue-600">
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="8" y1="13" x2="16" y2="13"></line>
+                    <line x1="8" y1="17" x2="16" y2="17"></line>
+                </svg>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a href="settings.html" class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-blue-600">
+
+                <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.5 1.5-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.55V20h-2.12v-.09a1.7 1.7 0 0 0-1.03-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06-1.5-1.5.06-.06A1.7 1.7 0 0 0 9.2 15a1.7 1.7 0 0 0-1.55-1.03H7v-2.12h.65A1.7 1.7 0 0 0 9.2 10.8a1.7 1.7 0 0 0-.34-1.88L8.8 8.86l1.5-1.5.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1.03-1.55V6h2.12v.21a1.7 1.7 0 0 0 1.03 1.55 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.5 1.5-.06.06A1.7 1.7 0 0 0 19.4 10c.22.58.78.97 1.4.97H21v2.12h-.2A1.7 1.7 0 0 0 19.4 15z"></path>
+                </svg>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- User Account -->
+        <div class="mt-8 border-t border-gray-100 pt-5">
+
+            <div class="flex items-center gap-3 rounded-lg bg-gray-50 p-3">
+
+                <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-700">
+                    HC
+                </div>
+
+                <div class="min-w-0">
+                    <p class="truncate text-sm font-semibold text-gray-900">
+                        Hassam Chuhan
+                    </p>
+
+                    <p class="truncate text-xs text-gray-500">
+                        Administrator
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</aside>
+
+        <!-- Main Content -->
+        <main class="min-w-0">
+
+            <header class="sticky top-0 z-10 border-b border-gray-300 bg-white">
+
+    <div class="flex h-16 items-center justify-between px-4 sm:px-6 md:px-8">
+
+        <!-- Left Side -->
+        <div class="flex items-center gap-3">
+
+            <!-- Mobile Brand -->
+            <div class="flex items-center gap-2 lg:hidden">
+
+                <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
+
+                    <svg
+                        class="h-4 w-4 text-white"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline>
+                    </svg>
+
+                </div>
+
+                <span class="text-base font-semibold tracking-tight text-gray-900">
+                    PulseBoard
+                </span>
+
+            </div>
+
+
+            <!-- Desktop Breadcrumb -->
+            <div class="hidden lg:block">
+
+                <p class="text-sm font-semibold text-gray-900">
+                    Customers
+                </p>
+
+                <p class="text-xs text-gray-500">
+                    Workspace / Customers
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-3">
+
+
+            <!-- Search -->
+            <div class="relative hidden sm:block">
+
+                <label for="dashboard-search" class="sr-only">
+                    Search dashboard
+                </label>
+
+                <svg
+                    class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-4-4"></path>
+                </svg>
+
+                <input
+                    id="dashboard-search"
+                    type="search"
+                    placeholder="Search anything..."
+                    class="h-10 w-56 rounded-lg border border-gray-200 bg-gray-50 pl-9 pr-3 text-sm text-gray-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
+                >
+
+            </div>
+
+
+            <!-- Mobile Search Icon -->
+            <button
+                type="button"
+                aria-label="Search"
+                class="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900 sm:hidden"
+            >
+
+                <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-4-4"></path>
+                </svg>
+
+            </button>
+
+
+            <!-- Notification -->
+            <button
+                type="button"
+                aria-label="Notifications"
+                class="relative flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900"
+            >
+
+                <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                >
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+                    <path d="M10 21h4"></path>
+                </svg>
+
+                <!-- Notification Badge -->
+                <span class="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500 ring-2 ring-white">
+                </span>
+
+            </button>
+
+
+            <!-- Divider -->
+            <div class="hidden h-7 w-px bg-gray-200 sm:block"></div>
+
+
+            <!-- User -->
+            <div class="flex items-center gap-2">
+
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-700">
+                    HC
+                </div>
+
+                <div class="hidden text-left md:block">
+
+                    <p class="text-sm font-medium text-gray-900">
+                        Hassam
+                    </p>
+
+                    <p class="text-xs text-gray-500">
+                        Admin
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+            
+
+            <!-- Page Content -->
+            <div class="mx-auto w-full max-w-[1600px] px-4 py-6 sm:px-6 md:px-8">
+
+                <!-- Page Heading -->
+                <section class="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <p class="mb-2 text-sm font-medium text-blue-600">
+                            Customer Management
+                        </p>
+                        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                            Customers
+                        </h1>
+                        <p class="mt-2 max-w-2xl text-sm leading-6 text-gray-500 sm:text-base">
+                            Manage customer relationships, monitor account activity, and review customer value.
+                        </p>
+                    </div>
+
+                    <button type="button" class="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m-7-7h14"/>
+                        </svg>
+                        Add Customer
+                    </button>
+                </section>
+
+                <!-- Customer Summary Cards -->
+                <section class="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+
+                    <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-sm font-medium text-gray-500">Total Customers</p>
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8-1a4 4 0 1 0 0-8m4 19v-2a4 4 0 0 0-3-3.87"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-2xl font-bold tracking-tight text-gray-900">18,342</p>
+                        <p class="mt-2 text-xs font-medium text-emerald-600">↑ 8.7% <span class="font-normal text-gray-400">vs last month</span></p>
+                    </article>
+
+                    <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-sm font-medium text-gray-500">Active Customers</p>
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4L19 6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-2xl font-bold tracking-tight text-gray-900">15,728</p>
+                        <p class="mt-2 text-xs font-medium text-emerald-600">↑ 6.2% <span class="font-normal text-gray-400">vs last month</span></p>
+                    </article>
+
+                    <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-sm font-medium text-gray-500">Pending Accounts</p>
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-2xl font-bold tracking-tight text-gray-900">426</p>
+                        <p class="mt-2 text-xs font-medium text-amber-600">Needs review <span class="font-normal text-gray-400">this week</span></p>
+                    </article>
+
+                    <article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-sm font-medium text-gray-500">Customer Revenue</p>
+                            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-50 text-violet-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20m5-16H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-2xl font-bold tracking-tight text-gray-900">$186,240</p>
+                        <p class="mt-2 text-xs font-medium text-emerald-600">↑ 11.4% <span class="font-normal text-gray-400">vs last month</span></p>
+                    </article>
+
+                </section>
+
+                
+<!-- Customers Table -->
+<section class="mb-8">
+    <div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+
+        <!-- Table Header -->
+        <div class="flex flex-col gap-4 border-b border-gray-100 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <div>
+                <h3 class="text-base font-semibold text-gray-900">
+                    All Customers
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                    Manage and review your customer accounts.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-3 sm:flex-row">
+                <label class="relative block">
+                    <span class="sr-only">Search customers</span>
+                    <svg class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
+                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                         stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-4-4"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        placeholder="Search customers..."
+                        class="h-10 w-full rounded-lg border border-gray-200 bg-gray-50 pl-9 pr-3 text-sm text-gray-900 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100 sm:w-56"
+                    >
+                </label>
+
+                <button
+                    type="button"
+                    class="inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 transition hover:bg-gray-50 hover:text-blue-600"
+                >
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M4 7h16"></path>
+                        <path d="M7 12h10"></path>
+                        <path d="M10 17h4"></path>
+                    </svg>
+                    Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Responsive Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full min-w-[850px] text-left text-sm">
+                <thead class="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+                    <tr>
+                        <th scope="col" class="px-5 py-4 font-medium sm:px-6">
+                            Customer
+                        </th>
+                        <th scope="col" class="px-5 py-4 font-medium">
+                            Company
+                        </th>
+                        <th scope="col" class="px-5 py-4 font-medium">
+                            Plan
+                        </th>
+                        <th scope="col" class="px-5 py-4 font-medium">
+                            Status
+                        </th>
+                        <th scope="col" class="px-5 py-4 font-medium">
+                            Joined
+                        </th>
+                        <th scope="col" class="px-5 py-4 text-right font-medium">
+                            Revenue
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody class="divide-y divide-gray-100">
+
+                    <!-- Customer 1 -->
+                    <tr class="transition hover:bg-gray-50">
+                        <td class="whitespace-nowrap px-5 py-4 sm:px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-700">
+                                    OL
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Olivia Lewis</p>
+                                    <p class="mt-0.5 text-xs text-gray-500">olivia@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Northstar Studio</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Enterprise</td>
+                        <td class="whitespace-nowrap px-5 py-4">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                Active
+                            </span>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-500">Oct 02, 2026</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-right font-medium text-gray-900">$12,450</td>
+                    </tr>
+
+                    <!-- Customer 2 -->
+                    <tr class="transition hover:bg-gray-50">
+                        <td class="whitespace-nowrap px-5 py-4 sm:px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple-100 text-sm font-semibold text-purple-700">
+                                    JM
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">James Miller</p>
+                                    <p class="mt-0.5 text-xs text-gray-500">james@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Vertex Digital</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Professional</td>
+                        <td class="whitespace-nowrap px-5 py-4">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                Active
+                            </span>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-500">Sep 28, 2026</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-right font-medium text-gray-900">$8,920</td>
+                    </tr>
+
+                    <!-- Customer 3 -->
+                    <tr class="transition hover:bg-gray-50">
+                        <td class="whitespace-nowrap px-5 py-4 sm:px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-semibold text-amber-700">
+                                    SC
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Sophia Carter</p>
+                                    <p class="mt-0.5 text-xs text-gray-500">sophia@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">BrightPath Co.</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Starter</td>
+                        <td class="whitespace-nowrap px-5 py-4">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-700">
+                                <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                                Pending
+                            </span>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-500">Sep 25, 2026</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-right font-medium text-gray-900">$2,180</td>
+                    </tr>
+
+                    <!-- Customer 4 -->
+                    <tr class="transition hover:bg-gray-50">
+                        <td class="whitespace-nowrap px-5 py-4 sm:px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-rose-100 text-sm font-semibold text-rose-700">
+                                    EB
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Ethan Brooks</p>
+                                    <p class="mt-0.5 text-xs text-gray-500">ethan@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Cloudline Systems</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Professional</td>
+                        <td class="whitespace-nowrap px-5 py-4">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700">
+                                <span class="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                                Inactive
+                            </span>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-500">Sep 21, 2026</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-right font-medium text-gray-900">$0</td>
+                    </tr>
+
+                    <!-- Customer 5 -->
+                    <tr class="transition hover:bg-gray-50">
+                        <td class="whitespace-nowrap px-5 py-4 sm:px-6">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cyan-100 text-sm font-semibold text-cyan-700">
+                                    AW
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Ava Wilson</p>
+                                    <p class="mt-0.5 text-xs text-gray-500">ava@example.com</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Summit Works</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-600">Enterprise</td>
+                        <td class="whitespace-nowrap px-5 py-4">
+                            <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                Active
+                            </span>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-4 text-gray-500">Sep 18, 2026</td>
+                        <td class="whitespace-nowrap px-5 py-4 text-right font-medium text-gray-900">$6,740</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex flex-col gap-3 border-t border-gray-100 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+            <p class="text-sm text-gray-500">
+                Showing <span class="font-medium text-gray-900">1–5</span> of
+                <span class="font-medium text-gray-900">248</span> customers
+            </p>
+
+            <div class="flex items-center gap-2">
+                <button
+                    type="button"
+                    disabled
+                    class="inline-flex h-9 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 px-3 text-sm font-medium text-gray-400"
+                >
+                    Previous
+                </button>
+                <button
+                    type="button"
+                    class="inline-flex h-9 min-w-9 items-center justify-center rounded-lg bg-blue-600 px-3 text-sm font-medium text-white"
+                    aria-current="page"
+                >
+                    1
+                </button>
+                <button
+                    type="button"
+                    class="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-600 transition hover:bg-gray-50"
+                >
+                    2
+                </button>
+                <button
+                    type="button"
+                    class="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-600 transition hover:bg-gray-50"
+                >
+                    3
+                </button>
+                <button
+                    type="button"
+                    class="inline-flex h-9 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-600 transition hover:bg-gray-50"
+                >
+                    Next
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Customer Insights -->
+<section class="mb-8 grid grid-cols-1 gap-6 xl:grid-cols-3">
+
+    <!-- Customer Acquisition Chart -->
+    <div class="min-w-0 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 xl:col-span-2">
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+                <h3 class="text-base font-semibold text-gray-900">
+                    Customer Acquisition
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                    Monthly new customer registrations
+                </p>
+            </div>
+
+            <span class="inline-flex w-fit items-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-600">
+                <span class="h-2 w-2 rounded-full bg-blue-600"></span>
+                New customers
+            </span>
+        </div>
+
+        <div class="mt-6">
+            <div class="flex items-baseline gap-2">
+                <p class="text-3xl font-semibold tracking-tight text-gray-900">
+                    1,284
+                </p>
+                <span class="text-sm font-medium text-emerald-600">
+                    +18.6%
+                </span>
+            </div>
+            <p class="mt-1 text-xs text-gray-500">
+                Compared with the previous period
+            </p>
+        </div>
+
+        <!-- SVG Chart -->
+        <div class="mt-6 w-full">
+            <svg
+                viewBox="0 0 600 230"
+                class="h-auto w-full"
+                role="img"
+                aria-label="Bar chart showing monthly new customer registrations from April to September"
+            >
+                <!-- Horizontal grid lines -->
+                <g stroke="#E5E7EB" stroke-width="1">
+                    <line x1="45" y1="25" x2="585" y2="25"></line>
+                    <line x1="45" y1="65" x2="585" y2="65"></line>
+                    <line x1="45" y1="105" x2="585" y2="105"></line>
+                    <line x1="45" y1="145" x2="585" y2="145"></line>
+                    <line x1="45" y1="185" x2="585" y2="185"></line>
+                </g>
+
+                <!-- Y-axis labels -->
+                <g fill="#9CA3AF" font-size="10" text-anchor="end">
+                    <text x="35" y="29">400</text>
+                    <text x="35" y="69">300</text>
+                    <text x="35" y="109">200</text>
+                    <text x="35" y="149">100</text>
+                    <text x="35" y="189">0</text>
+                </g>
+
+                <!-- Monthly bars -->
+                <g>
+                    <rect x="75" y="113" width="42" height="72" rx="5" fill="#BFDBFE"></rect>
+                    <rect x="160" y="93" width="42" height="92" rx="5" fill="#93C5FD"></rect>
+                    <rect x="245" y="78" width="42" height="107" rx="5" fill="#60A5FA"></rect>
+                    <rect x="330" y="59" width="42" height="126" rx="5" fill="#3B82F6"></rect>
+                    <rect x="415" y="43" width="42" height="142" rx="5" fill="#3B82F6"></rect>
+                    <rect x="500" y="31" width="42" height="154" rx="5" fill="#2563EB"></rect>
+                </g>
+
+                <!-- X-axis labels -->
+                <g fill="#6B7280" font-size="11" text-anchor="middle">
+                    <text x="96" y="210">Apr</text>
+                    <text x="181" y="210">May</text>
+                    <text x="266" y="210">Jun</text>
+                    <text x="351" y="210">Jul</text>
+                    <text x="436" y="210">Aug</text>
+                    <text x="521" y="210">Sep</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Customer Segments -->
+    <div class="min-w-0 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6">
+
+        <div>
+            <h3 class="text-base font-semibold text-gray-900">
+                Customer Segments
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">
+                Distribution by subscription plan
+            </p>
+        </div>
+
+        <div class="mt-7 space-y-6">
+
+            <!-- Enterprise -->
+            <div>
+                <div class="mb-2 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-blue-600"></span>
+                        <span class="text-sm font-medium text-gray-700">Enterprise</span>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-900">28%</span>
+                </div>
+                <div class="h-2 overflow-hidden rounded-full bg-gray-100">
+                    <div class="h-full w-[28%] rounded-full bg-blue-600"></div>
+                </div>
+                <p class="mt-1.5 text-xs text-gray-500">695 customers</p>
+            </div>
+
+            <!-- Professional -->
+            <div>
+                <div class="mb-2 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+                        <span class="text-sm font-medium text-gray-700">Professional</span>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-900">46%</span>
+                </div>
+                <div class="h-2 overflow-hidden rounded-full bg-gray-100">
+                    <div class="h-full w-[46%] rounded-full bg-emerald-500"></div>
+                </div>
+                <p class="mt-1.5 text-xs text-gray-500">1,141 customers</p>
+            </div>
+
+            <!-- Starter -->
+            <div>
+                <div class="mb-2 flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-amber-500"></span>
+                        <span class="text-sm font-medium text-gray-700">Starter</span>
+                    </div>
+                    <span class="text-sm font-semibold text-gray-900">26%</span>
+                </div>
+                <div class="h-2 overflow-hidden rounded-full bg-gray-100">
+                    <div class="h-full w-[26%] rounded-full bg-amber-500"></div>
+                </div>
+                <p class="mt-1.5 text-xs text-gray-500">645 customers</p>
+            </div>
+
+        </div>
+
+        <div class="mt-7 rounded-lg bg-gray-50 p-4">
+            <p class="text-sm font-medium text-gray-900">
+                Total customer base
+            </p>
+            <p class="mt-1 text-2xl font-semibold tracking-tight text-gray-900">
+                2,481
+            </p>
+            <p class="mt-1 text-xs text-gray-500">
+                Across all subscription plans
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+</div>
+            
+            <!-- Customers Footer -->
+
+<div class="mx-auto w-full max-w-[1600px] px-4 sm:px-6 md:px-8">
+
+   <footer class="mt-10 border-t border-gray-300 py-6">
+      <div class="flex flex-col gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+
+        <p class="text-xs text-gray-500">
+            © 2026 PulseBoard. All rights reserved.
+        </p>
+
+        <div class="flex items-center justify-center gap-4 text-xs text-gray-500 sm:justify-end">
+            <a href="settings.html" class="transition-colors hover:text-gray-900">
+                Settings
+            </a>
+            <a href="reports.html" class="transition-colors hover:text-gray-900">
+                Reports
+            </a>
+            <span class="inline-flex items-center gap-1.5">
+                <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                All systems operational
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+</div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
